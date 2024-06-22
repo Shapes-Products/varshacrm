@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px; /* Add padding to create space around the edges */
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap onto the next line */
+            justify-content: space-around; /* Center items with space around */
+            align-items: flex-start; /* Align items to the top of the container */
+            min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+        }
+        
+        .work-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px); /* Calculate width to fit three items per row with margin */
+            text-align: center;
+            margin: 10px; /* Adjust margin for spacing between items */
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .work-item:hover {
+            transform: rotate(3deg); /* Rotate the box slightly on hover */
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #0056b3;
+        }
+        
+        .Varsha {
+            text-align: center;
+            width: 100%; /* Ensure the header spans the full width */
+            font-size: 50px;
+            margin-bottom: 20px; /* Add space below the header */
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            overflow: hidden; /* Hide any overflowing content */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove border around iframe */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="Varsha">Varsha's Dashboard!</h1>
+
+    <div class="work-item">
+        <h1>Checklist</h1>
+        <a href="https://script.google.com/a/macros/shapesproducts.in/s/AKfycbwH6WKTUHYPUDxNtRp8ZqdntFSG8eqAbE9NgDDgmNjnHQ0a7CzvljITkYQFBA5mGBkT/exec?page=Delegatee&user=crm%40shapesproducts.in&pswd" target="_blank">Go to Checklist</a>
+    </div>
+
+    <div class="work-item">
+        <h1>New Customer Creation</h1>
+        <a href="https://docs.google.com/spreadsheets/d/1ehzFFpXVYWFntJ2cE98xno40joXCxkdbALIlgyvgqA4/edit?usp=sharing" target="_blank">Create New Customer</a>
+    </div>
+
+    <div class="work-item">
+        <h1>Return FMS</h1>
+        <a href="https://docs.google.com/spreadsheets/d/14wOBKmo9BEYbTPLUYndabibPJXWZ_A9EYdddYgRJ4F8/edit?usp=sharing" target="_blank">Manage Returns</a>
+    </div>
+
+    <div class="work-item">
+        <h1>Receiving LR</h1>
+        <a href="https://docs.google.com/spreadsheets/d/1CwFoNzvR7fGMfGWSe-oj_hSxCFx2NoSYp1wNko2Z8dI/edit#gid=64232242" target="_blank" onclick="loadReceivingLR()">Receive Loading Receipts</a>
+    </div>
+
+    <div class="work-item">
+        <h1>O2D</h1>
+        <a href="https://docs.google.com/spreadsheets/d/14zRdlGPtj5kwD0-WaDetMc3-uLeZRDtk_98cnoOlvJs/edit?usp=sharing" target="_blank">Order to Delivery</a>
+    </div>
+
+    <div class="work-item">
+        <h1>Bluedart</h1>
+        <a href="https://bluedart.com/web/guest/home?p_p_id=com_liferay_login_web_portlet_LoginPortlet&p_p_lifecycle=0&_com_liferay_login_web_portlet_LoginPortlet_redirect=%2Fgroup%2Fblue-dart%2Ftrackdartresult" target="_blank">Track Shipments</a>
+    </div>
+
+    <div class="work-item">
+        <h1>Display Stand Tracking</h1>
+        <a href="https://docs.google.com/spreadsheets/d/182eFPUm4z5rvDNM7nWN9hzCDjveoliZUDn-IOrXIruM/edit?usp=sharing" target="_blank">Display Stand Tracking</a>
+    </div>
+
+    <div class="work-item">
+        <h1>WhatsApp</h1>
+        <a href="https://web.whatsapp.com/" target="_blank">Direct Web WhatsApp</a>
+    </div>
+
+    <div class="work-item">
+        <h1>Receivable Management System</h1>
+        <button onclick="loadRMS()">Go to RMS</button>
+    </div>
+    
+    <div class="iframe-container">
+        <iframe id="rmsIframe" src=""></iframe>
+    </div>
+
+    <script>
+        function loadReceivingLR() {
+            var iframe = document.getElementById('rmsIframe');
+            iframe.src = "link_to_receiving_lr";
+        }
+
+        function loadRMS() {
+            var iframe = document.getElementById('rmsIframe');
+            iframe.src = "https://docs.google.com/spreadsheets/d/10qyTpLBfg-gJBD1T_uWDI5uwh0D6PHMtnOZJs2nY22g/edit#gid=1331193500";
+        }
+    </script>
+
+</body>
+</html>
